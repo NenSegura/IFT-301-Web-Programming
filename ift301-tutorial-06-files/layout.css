@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+/* HTML and Body Styles */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #8c1d40;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+}
+
+body {
+	background-color: white;
+	max-width: 1024px;
+	margin: 0px auto;
+	box-shadow: 10px 10px 25px #333, -10px 10px 25px #333;
+}
+
+/* Header and Navigation Styles */
+
+header {
+	position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+header > img {
+	max-width: 100%;
+}
+
+header > nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #333;
+	height: 50px;
+}
+
+header > nav > a {
+	text-decoration: none;
+	color: white;
+	display: block;
+	height: 50px;
+	padding: 0.5em 1em;
+	line-height: 2.5em;
+	font-size: 0.9em;
+}
+
+header > nav > a:hover, header > nav > a:active {
+	background-color: white;
+	color: #333;
+}
+
+/* Section Styles */
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: start;
+	padding: 0 1em;
+	padding-top: 1em;
+	padding-bottom: 2em;
+	background-color: white;
+}
+
+/* Search Bar Styles */
+
+#searchBox {
+	width: 200px;
+	height: 30px;
+	font-size: 20px;
+	padding-left: 0.3em;
+	line-height: 30px;
+}
+
+#searchButton {
+	height: 30px;
+	width: 40px;
+	cursor: pointer;
+}
+
+#searchButton img {
+	max-height: 25px;
+}
+
+/* Footer Styles */
+
+footer {
+	background-color: black;
+	padding: 1em;
+	max-height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer img {
+	max-height: 100%;
+	max-width: 300px;
+}
+
+footer a {
+	margin-right: 1em;
+}
+
+@media (max-width: 767px) {
+	footer {
+		max-height: unset;
+		flex-direction: column-reverse;
+	}
+}
+
