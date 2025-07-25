@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+/* Navigation Hover Styles */
+
+header > nav > a{
+    position: relative;
+
+}
+
+header > nav > a:after{
+    content:"";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%) scaleX(0);
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+header > nav > a:hover:after{
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Video Player Styles */
+
+video {
+    border: solid 10px #8c1d40;
+    border-radius: 0.3em;
+    display: block;
+    margin: auto;
+}
+@media (max-width: 640px) {
+    video {
+        max-width: 100%;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+    }
+}
+
+
+/* Loading Styles */
+
+#loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 1;
+    animation-name: loading;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+}
+
+#loading img {
+    max-width: 100%
+}
+
+#loading h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+@media (max-width: 1024px) {
+    #loading {
+        width: 100vw;
+        height: 100vh;
+        right: unset;
+        bottom: unset; 
+        z-index: 100;
+    }
+}
+
+@media (max-width: 767px) {
+    #loading h1 {
+        font-size: 2em;
+    }
+}
+
+#loading .front, #loading .back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#loading .message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100px);
+}
+
+@media (max-width: 767px) {
+    #loading .message {
+        transform: translate(-50%, 40px);
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    #loading .message {
+        transform: translate(-50%, 70px) 
+    }
+}
+/* Keyframe Animations */
+
+#loading .sunburst {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(0.5) scaleX(0.38);
+    transform-origin: center;
+    background-color: #ffcb25;
+    height: 100%;
+    width: 100%;
+    animation-name: sunburst;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    mask-image: url(sunburst_mask.png);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
+
+/* Animation Styles */
+
+@keyframes sunburst {
+    0% {
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 10px white inset;
+        transform: translate(-50%, -50%) scaleX(0) scaleY(0);
+        mask-image: none;
+    }
+    60% {
+        border-radius: 30%;
+        box-shadow: 0px 0px 10px 10px white inset;
+        mask-image: none;
+        transform: translate(-50%, -50%) scaleY(0.5) scaleX(0.38);
+
+    }
+    61% {
+        mask-image: url(sunburst_mask.png);
+        box-shadow: none;
+        border-radius: 30%;
+        transform: translate(-50%, -50%) scaleX(1) scaleY(1);
+    }
+
+    100% {
+        mask-image: url(sunburst_mask.png);
+        box-shadow: none;
+        border-radius: 30%;
+        transform: translate(-50%, -50%) scaleX(1) scaleY(1);
+    }
+
+}
+
+@keyframes loading {
+    0% {
+        display: block;
+    }
+    99% {
+        display: block;
+    }
+    100% {
+        display: none;
+    }
+}
+
+@keyframes body-scroll {
+    0% {
+        overflow: hidden;
+    }
+    99% {
+        overflow: hidden;
+    }
+    100% {
+        overflow: auto;
+    }
+}
+
+body {
+    animation-name: body-scroll;
+    animation-iteration-count: 1;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
