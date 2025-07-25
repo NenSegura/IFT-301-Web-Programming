@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+/* Font Faces */
+@font-face {	
+	font-family: "Bebas Neue";
+	src: url("BebasNeue-Regular.ttf") format("truetype");
+}
+@font-face {
+	
+	font-family: "Familjen Grotesk";
+    src: url("FamiljenGrotesk-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: "Familjen Grotesk";
+    src: url("FamiljenGrotesk-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+	font-family: "Familjen Grotesk";
+    src: url("FamiljenGrotesk-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+	font-family: "Familjen Grotesk";
+    src: url("FamiljenGrotesk-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+}
+	
+/* Structural Styles */
+html {
+    background-color: #8c1d40;
+}
+
+body {
+	background-color: white;
+	font-family: "Familjen Grotesk", sans-serif;
+}
+footer{
+	background-color: #ffc627;
+	padding: 5px;
+}
+address {
+	font-style: normal;
+	font-size: 0.9em;
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 10px
+}
+	
+	
+/* Heading Styles */
+
+h1, h2 {
+	font-family: "Bebas Neue", sans-serif;
+	font-style: normal;
+}
+
+/* Navigation Styles */
+
+nav > ul {
+	list-style-type: none;
+	line-height; 2em;
+	font-size: 0.9em;
+	padding-left: 0;
+}
+nav a {
+	text-decoration: none;
+	color: #8c1d40;
+	padding-left: 40px;
+}
+nav a:hover,
+nav a:active {
+	background-color: #8c1d40;
+	color: white;
+}
+/* Article Styles */
+
+#main_information h1 {
+	font-size: 2.20em;
+	letter-spacing: 0.1em;
+}
+#main_information h2 {
+	font-size: 1.60em;
+}
+article#main_information > p {
+	font-size: 1.10em;
+}
+article p:first-of-type::first-line {
+    font-variant: small-caps;
+    font-size: 1.2em;
+}
+
+
+
+/* Aside Styles */
+#schedule {
+	background-color: #eeeeee;
+	padding: 10px;
+}
+aside h1 {
+	font-size: 1.50em;
+}
+aside h2 {
+	font-size: 1.10em;
+}
+aside p {
+	font-size: 0.90em;
+}
+.date-time {
+    color: #8c1d40;
+    font-weight: bold;
+}
+
+
+
+/* Footer Styles */
+
+footer address a {
+	color: black;
+}
