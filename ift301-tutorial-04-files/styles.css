@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/* Body Styles */
+
+body {
+    box-shadow: 10px 0px 50px #333333, -10px 0px 50px #333333;
+    background: linear-gradient(to bottom, #eeeeee 50%, #aaaaaa 100%);
+}
+
+
+/* Tab Navigation Styles */
+body > header > nav.tabs {
+    background: url(nav_bg.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+body > header > nav.tabs li {
+        border: solid 1px white;
+        border-bottom: none;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        overflow: hidden;
+    }
+
+body > header > nav.tabs li.active, body > header > nav.tabs li:hover {
+    box-shadow: 0 -3px 3px -3px black, 3px 0px 3px -3px black, -3px 0px 3px -3px black;
+}
+
+/* Left Section Styles */
+
+section#left nav.vertical{
+    border: solid 1px #8c1d40;
+    border-radius: 0.75em;
+    overflow: hidden;
+}
+
+article#hours {
+    border: solid 1px #ffc627;
+    border-radius: 0.75em;
+    overflow: hidden;
+}
+
+article#hours h2 {
+    border-bottom: solid 1px #333333;
+}
+
+/* Center Section Styles */
+
+article#nutrition {
+    border: solid 1px #333333;
+}
+
+article#nutrition p {
+    border-top: solid 1px #333333;
+
+}
+
+article#nutrition p:first-of-type {
+    border-top: none;
+}
+ article#nutrition p.category:nth-of-type(2){
+     border-top: none;
+ }
+
+ article#nutrition p.subcategory {
+     border-top: none;
+ }
+
+/* Right Section Styles */
+
+section#right blockquote {
+    background-color: white;
+    border: solid 1px #8c1d40;
+    border-radius: 25px;
+    filter: drop-shadow(5px 5px 10px #333);
+
+}
+
+section#right blockquote:before{
+    border: solid 26px transparent;
+    border-left: solid 26px #8c1d40;
+    transform: rotate(-45deg);
+
+}
+section#right blockquote:after {
+        border: solid 25px transparent;
+        border-left: solid 25px white;
+        transform: rotate(-45deg);
+    }
+section#right cite img {
+    border-radius: 50%;
+}
