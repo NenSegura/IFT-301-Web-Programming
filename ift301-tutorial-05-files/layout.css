@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+/* HTML and Body Styles */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #8c1d40;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+}
+
+body {
+	background-color: white;
+	max-width: 1024px;
+	margin: 0px auto;
+	box-shadow: 10px 10px 25px #333, -10px 10px 25px #333;
+}
+
+/* Header and Navigation Styles */
+
+header {
+	background-image: url(banner.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+	min-height: 400px;
+}
+
+header > h1 {
+	position: absolute;
+	background-color: #ffc627;
+	width: fit-content;
+	padding: 0.5em 1em;
+}
+
+header > nav {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #333;
+	height: 50px;
+}
+
+header > nav > a {
+	text-decoration: none;
+	color: white;
+	display: block;
+	height: 50px;
+	padding: 0.5em 1em;
+	line-height: 2.5em;
+	font-size: 0.9em;
+}
+
+header > nav > a:hover, header > nav > a:active {
+	background-color: white;
+	color: #333;
+}
+
+nav#mobile a {
+	font-size: 1.2em;
+	color: white;
+	text-shadow: 0 0 5px #333;
+	text-decoration: none;
+	padding: 1em;
+	margin: 0.5em;
+}
+
+/* Section Styles */
+
+section {
+	padding: 0 1em;
+	padding-top: 1em;
+	padding-bottom: 2em;
+	background-color: white;
+}
+
+section:nth-of-type(even) {
+	background-color: lightgray;
+}
+
+section img {
+	max-width: 250px;
+	height: auto;
+	margin-right: 1em;
+}
+
+section article {
+	max-width: 450px;
+	margin-right: 1em;
+}
+
+section aside {
+	width: 250px;
+	height: 150px;
+	padding: 1em;
+	background-color: lightgray;
+}
+
+section:nth-of-type(even) aside {
+	background-color: white;
+}
+
+section aside address {
+	font-weight: bold;
+	font-style: normal;
+}
+
+section a.btn {
+	display: block;
+	padding: 0.5em 1em;
+	background-color: #8c1d40;
+	color: white;
+	text-decoration: none;
+	border-radius: 0.3em;
+	max-width: 200px;
+	text-align: center;
+	margin-top: 1em;
+}
+
+/* Footer Styles */
+
+footer {
+	background-color: black;
+	padding: 1em;
+}
+
+footer img {
+	max-height: 100%;
+	max-width: 300px;
+}
+
+footer a {
+	margin-right: 1em;
+}
