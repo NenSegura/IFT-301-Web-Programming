@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #aaa;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	max-width: 1100px;
+	margin: auto;
+	line-height: 1.5em;
+	background-color: white;
+	box-shadow: -20px 0px 25px #333, 20px 0px 25px #333;
+}
+
+header {
+	background-color: #5456a4;
+	color: white;
+	height: 50px;
+}
+
+header > nav {
+	float: right;
+	height: 50px;
+}
+
+header > nav > a {
+	display: inline-block;
+	line-height: 50px;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	padding: 0 1em;
+}
+
+header > nav > a:hover {
+	background-color: white;
+	color: #5456a4;
+}
+
+footer {
+	background-color: #5456a4;
+	color: white;
+	font-weight: bold;
+	padding: 1em;
+	text-align: center;
+}
