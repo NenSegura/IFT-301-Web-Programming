@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>IFT Job Fair Registration</title>
+		<link href="layout.css" rel="stylesheet" />
+		<link href="styles.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<input type="checkbox" id="menuCheck">
+			<label id="menuIcon" for="menuCheck">
+				<img class="menu-bars" src="menuBars.jpg">
+				<img class="close-icon" src="closeIcon.jpg">
+			</label>
+			<img src="banner.jpg" alt="IFT Program Alumni">
+			<nav>
+				<a href="#">Home</a>
+				<a href="#">Students</a>
+				<a href="#">Exhibitors</a>
+				<a href="#" class="active">Registration</a>
+				<a href="#">IFT Program Information</a>
+			</nav>
+		</header>
+		<section>
+			<p>The Arizona State University Information Technology (IFT) Program is thrilled to invite you to showcase your organization's opportunities and connect with our talented students at our upcoming event. This is a prime opportunity for your company to engage with the brightest minds in the field of information technology, as our program at ASU has a reputation for producing skilled and innovative professionals. To secure your spot as an exhibitor, please complete the registration form below. Thank you for your participation in making this event a success, and we look forward to welcoming you to the ASU IFT Program Job Fair!</p>
+		</section>
+		<section>
+			<!-- INSERT HTML FORM HERE -->
+			<form method="post" action="https://iftweb.eng.asu.edu/ift301/tutorials/07/submit.php" id="registration">
+				<fieldset id="companyInformation">
+					<legend>Company Information (required)</legend>
+					<label>Company Name</label>
+					<input type="text" name="company_name" id="companyName" placeholder="Company Name" required />
+					<label>Contact Person</label>
+					<input type="text" name="contact_person" id="contactPerson" placeholder="Full Name" required />
+					<label>Contact Email</label>
+					<input type="email" name="contact_email" id="contactEmail" placeholder="email@example.com" required />
+
+					<label>Contact Phone</label>
+					<input type="tel" name="contact_phone" id="contactPhone" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" placeholder="(###) ###-####" required />
+
+					<label>Street Address</label>
+					<input type="text" name="street_address" id="streetAddress" placeholder="1234 Main Street" required />
+
+					<label>Street Address 2</label>
+					<input type="text" name="street_address_2" id="streetAddress2" placeholder="Suite 100" />
+					<label>City</label>
+					<input type="text" name="city" id="city" placeholder="City" required />
+					<label for="state">State</label>
+					<input type="text" name="state" id="state" list="stateList" placeholder="AZ" required />
+					<datalist id="stateList">
+						<option value="AL"></option>
+						<option value="AK"></option>
+						<option value="AZ"></option>
+						<option value="AR"></option>
+						<option value="CA"></option>
+						<option value="CO"></option>
+						<option value="CT"></option>
+						<option value="DE"></option>
+						<option value="FL"></option>
+						<option value="GA"></option>
+						<option value="HI"></option>
+						<option value="ID"></option>
+						<option value="IL"></option>
+						<option value="IN"></option>
+						<option value="IA"></option>
+						<option value="KS"></option>
+						<option value="KY"></option>
+						<option value="LA"></option>
+						<option value="ME"></option>
+						<option value="MD"></option>
+						<option value="MA"></option>
+						<option value="MI"></option>
+						<option value="MN"></option>
+						<option value="MS"></option>
+						<option value="MO"></option>
+						<option value="MT"></option>
+						<option value="NE"></option>
+						<option value="NV"></option>
+						<option value="NH"></option>
+						<option value="NJ"></option>
+						<option value="NM"></option>
+						<option value="NY"></option>
+						<option value="NC"></option>
+						<option value="ND"></option>
+						<option value="OH"></option>
+						<option value="OK"></option>
+						<option value="OR"></option>
+						<option value="PA"></option>
+						<option value="RI"></option>
+						<option value="SC"></option>
+						<option value="SD"></option>
+						<option value="TN"></option>
+						<option value="TX"></option>
+						<option value="UT"></option>
+						<option value="VT"></option>
+						<option value="VA"></option>
+						<option value="WA"></option>
+						<option value="WV"></option>
+						<option value="WI"></option>
+						<option value="WY"></option>
+						<option value="AL"></option>
+						<option value="AL"></option>
+					</datalist>
+					<label for="zip">ZIP / Postal Code</label>
+					<input type="text" inputmode="numeric" name="zip" id="zip" pattern="^\d{5}(-\d{4})?$" placeholder="#####-####" required />
+				</fieldset>
+
+				<fieldset id="packageInformation">
+					<legend>Exhibitor Package (required)</legend>
+					<label class="packageLabel">
+						<input type="radio" name="package" value="maroon" required />
+						<span><strong>Maroon Exhibitor Package - $500</strong><br><br>Offers essential exposure for your organization. With a booth space in the general exhibition area, you'll have the opportunity to connect with students and showcase your company's offerings. This package includes standard booth setup, company listing in the event program, and two complimentary registrations for your representatives.</span>
+					</label>
+					<label class="packageLabel">
+						<input type="radio" name="package" value="gold" required />
+						<span><strong>Gold Exhibitor Package - $1,000</strong><br><br>Designed to maximize your visibility and engagement, this package includes a prime location for your booth, enhanced signage, and a dedicated promotional feature in our event program. Additionally, you'll receive four complimentary registrations, allowing more of your team to actively participate and network with potential candidates.</span>
+					</label>
+					<label class="packageLabel">
+						<input type="radio" name="package" value="sparky" required />
+						<span><strong>Sparky Exhibitor Package - $2,500</strong><br><br>Offering a premium booth location with optimal foot traffic, exclusive branding opportunities, and a dedicated session slot to present your company to attendees, this comprehensive package includes prominent logo placement in promotional materials, five complimentary registrations, and priority consideration for interview space following the event.</span>
+					</label>
+					<label class="packageLabel">
+						<input type="radio" name="package" value="sun_devil" required />
+						<span><strong>Sun Devil Exhibitor Package - $5,000</strong><br><br>The Sun Devil Exhibitor Package is our most exclusive offering, providing unparalleled exposure and access to the best talents in the ASU IFT Program. This package includes a premium double booth space, exclusive sponsorship recognition, a featured speaking slot during the main event, and a full-page advertisement in the event program. With six complimentary registrations, your team can fully capitalize on networking opportunities and engage with potential candidates in a more personalized manner. This top-tier package is designed to position your company as a leader in the field and maximize your impact at the job fair.</span>
+					</label>
+				</fieldset>
+
+				<fieldset id="paymentInformation">
+					<legend>Credit Card Information (required)</legend>
+
+					<label for="cardType">Credit Card Type</label>
+					<fieldset id="cardType">
+						<label class="cardLabel">
+							<input type="radio" name="credit_card" value="amex" required>
+							<img src="amex.png" alt="American Express">
+						</label>
+						<label class="cardLabel">
+							<input type="radio" name="credit_card" value="discover" required>
+							<img src="discover.png" alt="Discover">
+						</label>
+						<label class="cardLabel">
+							<input type="radio" name="credit_card" value="master" required>
+							<img src="master.png" alt="Mastercard">
+						</label>
+						<label class="cardLabel">
+							<input type="radio" name="credit_card" value="visa" required>
+							<img src="visa.png" alt="Visa">
+						</label>
+					</fieldset>
+				</fieldset>
+
+
+				<label for="cardNumber">Credit Card Number</label>
+				<input type="text" inputmode="numeric" name="card_number" id="cardNumber" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" placeholder="####-####-####-####" required />
+				<label for="expirationDate">Expiration Date</label>
+				<select id="expirationMonth" name="expiration_month" required>
+					<option value="">--Month--</option>
+					<option value="01">January (01)</option>
+					<option value="02">February (02)</option>
+					<option value="03">March (03)</option>
+					<option value="04">April (04)</option>
+					<option value="05">May (05)</option>
+					<option value="06">June (06)</option>
+					<option value="07">July (07)</option>
+					<option value="08">August (08)</option>
+					<option value="09">September (09)</option>
+					<option value="10">October (10)</option>
+					<option value="11">November (11)</option>
+					<option value="12">December (12)</option>
+
+				</select>
+				<input type="text" id="expirationYear" name="expiration_year" inputmode="numeric" placeholder="####" pattern="^2[0-9]{3}$" required />
+				<label for="securityCode">Security Code</label>
+				<input type="text" name="security_code" id="securityCode" inputmode="numeric" placeholder="###" pattern="^\d{3,4}$" required />
+				
+
+				<button type="submit" id="submitButton">
+					<img src="submit.png" />Submit
+				</button>
+			</form>
+		</section>
+		<footer>
+			<img src="asu_fultonengineering_white.png" alt="Ira Fulton Schools of Engineering Logo">
+			<div id="social_links">
+				<a href="#"><img src="fb_logo.jpg"></a>
+				<a href="#"><img src="x_logo.jpg"></a>
+				<a href="#"><img src="instagram_logo.jpg"></a>
+				<a href="#"><img src="linkedin_logo.jpg"></a>
+				<a href="#"><img src="flickr_logo.jpg"></a>
+				<a href="#"><img src="yt_logo.jpg"></a>
+			</div>
+		</footer>
+	</body>
+</html>
