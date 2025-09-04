@@ -1,0 +1,36 @@
+// JavaScript source code
+
+'use strict';
+
+document.getElementById('post-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+const user = document.getElementById('username').value.trim();
+const email = document.getElementById('email').value.trim();
+const phone = document.getElementById('phone').value.trim();
+const msg = document.getElementById('message').value.trim();
+
+  
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+ 
+const phonePattern = /^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/;
+
+ 
+if (!emailPattern.test(email)) {
+alert("Invalid email address.");
+return;
+}
+
+if (!phonePattern.test(phone)) {
+alert("Invalid phone number. Use format: 123-456-7890.");
+return;
+}
+
+if (user && msg) {
+const post = document.createElement('li');
+post.innerHTML = `<strong>${user}</strong> (${email}, ${phone}): ${msg}`;
+document.getElementById('discussion-list').appendChild(post);
+this.reset();
+}
+});

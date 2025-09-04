@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comments</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="comments">
+    <header>
+        <div class="dropdown">
+            <button>Menu</button>
+            <div class="content">
+                <a href="home.html">Home</a>
+                <a href="routes.html">Routes</a>
+                <a href="about.html">About</a>
+                <a href="comments.html">Comments</a>
+                <a href="sources.html">Sources</a>
+            </div>
+        </div>
+
+    </header>
+    <main class="board-container">
+        <h1>Leave Comments Below!</h1>
+        <h3>This page is for me to get feedback in order to learn more about how other people interpret these stories. <br /><br /> Please share any positive thoughts, questions, and suggestions here!</h3>
+        <form id="post-form">
+            <label for="username">Username:</label><br />
+            <input type="text" id="username" required /><br /><br />
+
+            <label for="email">Email:</label><br />
+            <input type="text" id="email" required /><br /><br />
+
+            <label for="phone">Phone Number:</label><br />
+            <input type="text" id="phone" required /><br /><br />
+
+            <label for="message">Message:</label><br />
+            <textarea id="message" required></textarea><br /><br />
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <ul id="discussion-list"></ul>
+        <aside id="gifspan">
+            <span id="gif">
+                <img id="pixme" src="pixme4.gif" alt="Pixel Cow Boy gif">
+            </span>
+        </aside>
+
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
